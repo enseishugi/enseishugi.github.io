@@ -2,6 +2,6 @@
 
 # Appunti per scuole superiori
 
-[Omotetie e dilatazioni](matematica-liceo/omotetie-dilatazioni.html)
+[Omotetie e dilatazioni](matematica-superiori/omotetie-dilatazioni.html)
 
-[Parabole](matematica-liceo/parabole.html)
+[Parabole](matematica-superiori/parabole.html)
