@@ -1,6 +1,4 @@
-# Enseishugi's Webpage
-
-:warning: `Under Construction Page` :construction:
+# Under Construction Page (Pagina in costruzione)
 
 # Appunti per scuole superiori
 
