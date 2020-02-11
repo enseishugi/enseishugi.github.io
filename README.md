@@ -1,3 +1,3 @@
 # Enseishugi webpage
 
-[Appunti](matematica-liceo.html)
+[Appunti](https://github.com/enseishugi/matematica-scuole-superiori/blob/master/matematica-liceo.html)
