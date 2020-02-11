@@ -3,5 +3,7 @@
 :warning: `Under Construction Page` :construction:
 
 # Appunti per scuole superiori
+
 [Omotetie e dilatazioni](matematica-liceo/omotetie-dilatazioni.html)
+
 [Parabole](matematica-liceo/parabole.html)
