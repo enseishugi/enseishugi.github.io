@@ -1,3 +1,3 @@
 # Enseishugi webpage
 
-[Appunti](matematica-liceo.html)
+[Appunti](matematica-liceo/omotetie-dilatazioni.html)
