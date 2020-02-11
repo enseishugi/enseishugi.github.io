@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-02-11 Tue 19:31 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Enrico Sintoni" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgb41951b">1. Definizione di parabola</a></li>
+<li><a href="#org87967ec">2. Equazione della parabola</a></li>
+<li><a href="#org58bb17c">3. Vertice di una parabola</a></li>
+<li><a href="#org717f63d">4. Formula del fuoco e della direttrice</a></li>
+<li><a href="#org7a1e826">5. Trovare una parabola dati tre punti</a></li>
+<li><a href="#orgc76d699">6. Trovare una parabole dato il fuoco e un punto</a></li>
+<li><a href="#org623e4b7">7. Trovare una parabola dato un vertice e un punto</a></li>
+<li><a href="#org7758c2d">8. Trovare la retta tangente una parabola in un punto della parabola</a></li>
+<li><a href="#orga82772a">9. Trovare (se esistono) le rette tangenti una parabola passanti per un punto del piano non nella parabola</a></li>
+</ul>
+</div>
+</div>
+<div class="HTML">
+<p>
+\(
+\require{cancel}
+\newcommand{\vv}   [1] {\overrightarrow{#1}} % Over-arrow for vectors notation
+\newcommand{\norm} [1] {\left|#1\right|} % Norm |x|
+\newcommand{\dist}[2]{\overline{{#1}{#2}}} % Distance between two points
+\newcommand{\NN}{\mathbb{N}} % Natural numbers
+\newcommand{\ZZ}{\mathbb{Z}} % Integers
+\newcommand{\QQ}{\mathbb{Q}} % Rational numbers
+\newcommand{\RR}{\mathbb{R}} % Real numbers
+\newcommand{\CC}{\mathbb{C}} % Complex numbers
+\)
+</p>
+
+</div>
+
+<div id="outline-container-orgb41951b" class="outline-2">
+<h2 id="orgb41951b"><span class="section-number-2">1</span> Definizione di parabola</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+La parabola ha origini sin dal periodo ellenico (Grecia antica) ed è definita
+partendo da due informazioni:
+</p>
+
+<ul class="org-ul">
+<li>Una retta, detta <b>retta direttrice</b> (diciamo \(r\) di equazione \(ax + by + c = 0\))</li>
+<li>Un punto, detto <b>fuoco</b> (diciamo \(F = (x_F, y_F)\))</li>
+</ul>
+
+<p>
+Per un punto \(P = (x,y)\) nel piano possiamo stabilire
+</p>
+
+<ol class="org-ol">
+<li><p>
+La distanza dal fuoco
+</p>
+
+<p>
+\[
+   \dist{P}{F} = \sqrt{(x_F - x)^2 + (y_F - y)^2}
+   \]
+</p></li>
+
+<li><p>
+La distanza dalla retta direttrice
+</p>
+
+<p>
+\[
+   \dist{P}{r} = \frac{\norm{a x + b y + c}}{\sqrt{a^2 + b^2}}
+   \]
+</p></li>
+</ol>
+
+<p>
+Una <b>parabola</b> di direttrice \(r\) e fuoco \(F\) è l'insieme dei punti \(P = (x,y)\)
+che hanno la stessa distanza da \(F\) e da \(r\), cioè per cui si ha l'uguaglianza
+tra le due distanze
+</p>
+
+<p>
+\[
+\sqrt{(x_F - x)^2 + (y_F - y)^2}
+= \frac{\norm{a x + b y + c}}{\sqrt{a^2 + b^2}}
+\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org87967ec" class="outline-2">
+<h2 id="org87967ec"><span class="section-number-2">2</span> Equazione della parabola</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Dalla definizione della parabola come insieme dei punti \(P = (x,y)\) distanti
+uguali dal fuoco e dalla direttrice è possibile ottenere un'equazione che metta
+in relazione le coordinate \(x\) e \(y\).
+</p>
+
+<p>
+Partiamo dall'equazione 
+</p>
+
+<p>
+\[
+\sqrt{(x_F - x)^2 + (y_F - y)^2}
+= \frac{\norm{a x + b y + c}}{\sqrt{a^2 + b^2}}
+\]
+</p>
+
+<p>
+ed eleviamo entrambi i membri alla seconda, in modo da eliminare le radici
+quadrate
+</p>
+
+<p>
+\[
+(x_F - x)^2 + (y_F - y)^2
+= \frac{(a x + b y + c)^2}{a^2 + b^2}
+\]
+</p>
+
+<p>
+A questo punto facciamo un po' di conti&#x2026;
+</p>
+
+\begin{align*}
+  (x_F - x)^2 + (y_F - y)^2 
+  &= \frac{(a x + b y + c)^2}{a^2 + b^2} \\
+  x_F^2 - 2 x_F x + x^2 + y_F^2 - 2 y_F y + y^2
+  &= \frac{a^2 x^2 + b^2 y^2 + c^2 + 2 ab xy + 2 bc y + 2 ac x}{a^2 + b^2}
+\end{align*}
+
+<p>
+Se ci mettiamo nell'ipotesi che la direttrice sia orizzontale (cioè parallela
+all'asse \(x\)), allora la sua equazione si riduce alla forma molto più semplice
+</p>
+
+<p>
+\[
+r \colon by + c = 0
+\]
+</p>
+
+<p>
+cioè \(a = 0\). Applicando questo fatto l'ultima uguaglianza diventa
+</p>
+
+\begin{align*}
+  x_F^2 - 2 x_F x + x^2 + y_F^2 - 2 y_F y + y^2
+  &= y^2 + \frac{c^2}{b^2} + \frac{2c}{b} y \\
+  x^2 - 2 x_F x + x_F^2 + y_F^2 - \frac{c^2}{b^2}
+  &= 2 \left(  y_F + \frac{c}{b} \right) y
+\end{align*}
+
+<p>
+Giunti a questi punto possiamo notare che per ipotesi il fuoco non sta nella
+direttrice, e avendo posto \(a = 0\) ogni punto della direttrice è della forma
+\((x, - \frac{c}{b})\), dunque sicuramente la coordinata \(y_F\) non è \(-
+\frac{c}{b}\). In questo modo sappiamo che \(y_F + \frac{c}{b} \neq 0\) e possiamo
+prenderne l'inverso moltiplicativo. Dunque, moltiplicando ambo i membri per
+l'inverso di \(2 (y_F + \frac{c}{b})\) (e scambiando i due membri) alla fine
+otteniamo l'equazione
+</p>
+
+<p>
+\[
+y = \alpha x^2 + \beta x + \gamma
+\]
+</p>
+
+<p>
+dove le lettere \(\alpha\), \(\beta\) e \(\gamma\) le abbiamo messe per semplificare
+l'esposizione; in realtà sono i valori (abbiamo fatto la semplificazione di \(2\)
+in \(\beta\))
+</p>
+
+<p>
+\[
+\alpha = \frac{1}{2 (y_F + \frac{c}{b})},
+\qquad
+\beta = - \frac{x_F}{y_F + \frac{c}{b}},
+\qquad
+\gamma = \frac{x_F^2 + y_F^2 - \frac{c^2}{b^2}}{2 (y_F + \frac{c}{b})}
+\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58bb17c" class="outline-2">
+<h2 id="org58bb17c"><span class="section-number-2">3</span> Vertice di una parabola</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Il <b>vertice</b> di una parabole è il punto della parabola che sta a "metà strada"
+tra il fuoco e la direttrice. Più precisamente, possiamo considerare la retta
+perpendicolare alla direttrice che passa per \(F\) (questa retta si chiama
+<b>asse</b>). Questa retta interseca la direttrice in un punto \(H\). Se quindi
+prendiamo il punto medio del segmento \(FH\), questo deve per forza stare nella
+parabola dato che la sua distanza da \(F\) e da \(r\) coincide.
+</p>
+
+<p>
+Chiamiamo questo punto \(V = (x_V, y_V)\), e supponiamo sempre di stare nel caso
+della direttrice parallela all'asse \(x\). Geometricamente è intuitivo che il
+vertice debba avere la stessa coordinata \(x\) del fuoco, cioè vale proprio \(x_V =
+x_F\), quindi se riusciamo a trovare un'equazione per \(x_F\) usando \(\alpha\),
+\(\beta\) o \(\gamma\), sappiamo ritrovare la direttrice e il fuoco.
+</p>
+
+<p>
+Dalla relazione che lega le coordinate dei punti nella parabola di fuoco \(F\) e
+direttrice \(r\) possiamo la coordinata \(x\) del fuoco, infatti si ha
+</p>
+
+<p>
+\[
+x_F = - \frac{\beta}{2 \alpha}
+\]
+</p>
+
+<p>
+Dato che il fuoco e il vertice hanno la stessa coordinata \(x\), ciò signfica che
+vale anche \(x_V = - \frac{\beta}{2 \alpha}\), e di conseguenza vale
+</p>
+
+\begin{align*}
+  y_V
+  &= \frac{\beta^2}{4 \alpha} - \frac{\beta^2}{2 \alpha} + \gamma \\
+  &= - \frac{\beta^2}{4 \alpha} + \gamma \\
+  &= \frac{- \beta^2 + 4 \alpha \gamma}{4 \alpha} \\
+  &= - \frac{\Delta}{4 \alpha}
+\end{align*}
+
+<p>
+dove \(\Delta\) è proprio il discriminante dell'equazione di secondo grado \(\alpha
+x^2 + \beta x + \gamma = 0\), cioè
+</p>
+
+<p>
+\[
+\Delta = \beta^2 - 4 \alpha \gamma.
+\]
+</p>
+
+<p>
+Alla fine di tutto, abbiamo mostrato che il vertice della parabola è il punto di
+coordinate
+</p>
+
+<p>
+\[
+    V = \left( - \frac{\beta}{2 \alpha},\, - \frac{\Delta}{4 \alpha} \right)
+  \]
+</p>
+
+<p>
+Possiamo anche ricavare l'espressione delle coordinate del vertice in funzione
+di dei coefficienti della retta direttrice e del fuoco sostituendo \(\alpha\),
+\(\beta\) e \(\gamma\) con le loro definizioni:
+</p>
+
+<p>
+\[
+    x_V = x_F  
+  \]
+</p>
+
+<p>
+e
+</p>
+
+\begin{align*}
+  y_V
+  &= - \frac{x_F^2}{2 (y_F + \frac{c}{b})} + \frac{x_F^2 + y_F^2 - \frac{c^2}{b^2}}{2 (y_F + \frac{c}{b})} \\
+  &= \frac{y_F^2 - \frac{c^2}{b^2}}{2 (y_F + \frac{c}{b})} \\
+  &= \frac{y_F - \frac{c}{b}}{2}
+\end{align*}
+
+<p>
+Quindi possiamo scrivere il vertice anche come
+</p>
+
+\begin{align*}
+  V = \left( x_F,\, \frac{y_F - \frac{c}{b}}{2} \right)
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-org717f63d" class="outline-2">
+<h2 id="org717f63d"><span class="section-number-2">4</span> Formula del fuoco e della direttrice</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Sappiamo che valgono le identità
+</p>
+
+<p>
+\[
+\alpha = \frac{1}{2 (y_F + \frac{c}{b})},
+\qquad
+-\frac{\Delta}{4 \alpha} = \frac{y_F - \frac{b}{c}}{2}
+\]
+</p>
+
+<p>
+che possiamo riscrivere nel modo seguente
+</p>
+
+\begin{align*}
+  y_F + \frac{c}{b} = \frac{1}{2 \alpha}
+  \qquad
+  y_F - \frac{c}{b} = - \frac{\Delta}{2 \alpha}
+\end{align*}
+
+<p>
+Se alla prima equazione sommiamo la seconda, facendo un po' di calcoli alla fine
+ottemiamo l'identità
+</p>
+
+<p>
+\[
+y_F = \frac{1 - \Delta}{4 \alpha}
+\]
+</p>
+
+<p>
+Sapendo già che vale anche \(x_F = - \frac{\beta}{2 \alpha}\), allora possiamo
+scrivere il fuoco della parabola come
+</p>
+
+<p>
+\[
+F = \left( - \frac{\beta}{2 \alpha},\, \frac{1 - \Delta}{4 \alpha} \right)
+\]
+</p>
+
+<p>
+Se invece alla seconda equazione sottraiamo la prima, facendo un po' di calcoli
+otteniamo l'identità
+</p>
+
+<p>
+\[
+-\frac{c}{b} = - \frac{1 + \Delta}{4 \alpha}
+\]
+</p>
+
+<p>
+quindi possiamo scrivere l'equazione della direttrice come
+</p>
+
+<p>
+\[
+y + \frac{1 + \Delta}{4 \alpha} = 0
+\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7a1e826" class="outline-2">
+<h2 id="org7a1e826"><span class="section-number-2">5</span> Trovare una parabola dati tre punti</h2>
+</div>
+
+<div id="outline-container-orgc76d699" class="outline-2">
+<h2 id="orgc76d699"><span class="section-number-2">6</span> Trovare una parabole dato il fuoco e un punto</h2>
+</div>
+
+<div id="outline-container-org623e4b7" class="outline-2">
+<h2 id="org623e4b7"><span class="section-number-2">7</span> Trovare una parabola dato un vertice e un punto</h2>
+</div>
+
+<div id="outline-container-org7758c2d" class="outline-2">
+<h2 id="org7758c2d"><span class="section-number-2">8</span> Trovare la retta tangente una parabola in un punto della parabola</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Supponiamo di avere una parabola \(\mathcal{P}\) di equazione \(y^2 = a x^2 + b x +
+c\) e di avere un suo punto \(P = (x_0, y_0)\). Ricordiamo che affinché il punto
+\(P\) sia nella parabola, le sue coordinate devono soddisfare l'equazione
+</p>
+
+<p>
+\[
+y_0 = a x_0^2 + b x_0 + c
+\]
+</p>
+
+<p>
+Ora consideriamo il fascio di rette passanti per il punto \(P\), che è dato
+dall'equazione parametrizzata
+</p>
+
+<p>
+\[
+y - y_0 = m (x - x_0)
+\]
+</p>
+
+<p>
+dove \(m \in \RR\) è un numero reale, e al variare di \(m\) abbiamo una retta
+diversa.
+</p>
+
+<p>
+Il nostro obiettivo è di trovare il parametro \(m \in \RR\) corrispondente alla
+retta tangente alla parabola \(\mathcal{P}\). Affinché una retta sia tangente alla
+parabola, devono interesecare soltanto in un punto, che deve proprio essere \(P\).
+</p>
+
+<p>
+La nostra strategia è di considerare il sistema seguente
+</p>
+
+<p>
+\[
+\left\{ \begin{array}{lrc}
+        y_0     = a x_0^2 + b x_0 + c & \qquad \text{($P$ è nella parabola $\mathcal{P}$)}     & \text{(I)} \\
+        y       = a x^2 + b x + c     & \qquad \text{(Equazione della parabola $\mathcal{P}$)} & \text{(II)} \\
+        y - y_0 = m (x - x_0)         & \qquad \text{(Equazion della retta)}                   & \text{(III)} \\
+        \end{array}
+\right.
+\]
+</p>
+
+<p>
+che corrisponde all'intersezione della retta con la parabola, in cui stiamo
+anche affermando che il punto \(P = (x_0, y_0)\) sia nella parabola. Le soluzioni
+del sistema sono punti \((x, y)\) che rendono vere la seconda e la terza
+equazione. Noi vogliamo che ci sia un'unica soluzione, cioè il punto \(P = (x_0,
+y_0)\).
+</p>
+
+<p>
+Prima di tutto dimostreremo che \(x = x_0\) è una soluzione per il sistema,
+indipendentemente dalla scelta di \(m\). Ciò in realtà non dovrebbe stupirci
+perché sappiamo per ipotesi che il punto \(P = (x_0, y_0)\) appartiene sia alla
+parabola che alla retta. Ciò che faremo noi, però, è di supporre che \(x_0\) sia
+l'unica soluzione, e da questo riusciremo a determinare quale sia il
+coefficiente angolare \(m\) corrispondente alla retta tangente.
+</p>
+
+<p>
+Per prima cosa, se sottraiamo all'equazione (II) i termini dell'equazione (I),
+membro a membro, si ottiene
+</p>
+
+\begin{alignat*}{2}
+y - y_0 & = a x^2 - a x_0^2 + b x - b x_0 + \cancel{c} - \cancel{c} && \\
+        & = a (x^2 - x_0^2) + b (x - x_0)                           && \\
+        & = a (x^2 - x_0^2) + b (x - x_0)                           && \\
+        & = a (x + x_0)(x - x_0) + b (x - x_0)                      & \qquad & \text{(Somma per differenza)}
+\end{alignat*}
+
+<p>
+Possiamo ora notare come il primo membro nella prima riga compaia anche come
+primo membro nell'equazione (III), da cui otteniamo
+</p>
+
+<p>
+\[
+m (x - x_0)
+= y - y_0
+= a (x + x_0)(x - x_0) + b (x - x_0)
+\]
+</p>
+
+<p>
+cioè
+</p>
+
+<p>
+\[
+m (x - x_0)
+= a (x + x_0)(x - x_0) + b (x - x_0)
+\]
+</p>
+
+<p>
+Portando ora tutto a primo membro e raccogliendo \(x - x_0\) otteniamo il prodotto
+seguente
+</p>
+
+<p>
+\[
+\underbrace{(x - x_0)}_{\text{Fattore 1}}
+\cdot \underbrace{(m - a(x + x_0) - b)}_{\text{Fattore 2}} = 0
+\]
+</p>
+
+<p>
+Affinché il prodotto dei due fattori sia nullo, uno dei due fattori deve essere
+nullo. Ricordiamoci che noi stiamo cercando \(m \in \RR\) affinché questa
+equazione abbia soltanto una soluzione \(x\). Dato che il primo fattore si annulla
+per \(x = x_0\), sappiamo che \(x_0\) è una soluzione dell'equazione. Dato che
+abbiamo richiesto l'unicità, ciò significa che anche il secondo fattore si deve
+annullare per \(x = x_0\), il che significa
+</p>
+
+<p>
+\[
+m - a(x_0 + x_0) - b = 0
+\]
+</p>
+
+<p>
+e isolando \(m\) si ottiene
+</p>
+
+<p>
+\[
+m = 2 a x_0 + b
+\]
+</p>
+
+<p>
+Quindi la retta tangente è proprio quella di equazione
+</p>
+
+<p>
+\[
+y - y_0 = (2 a x_0 + b) (x - x_0)
+\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga82772a" class="outline-2">
+<h2 id="orga82772a"><span class="section-number-2">9</span> Trovare (se esistono) le rette tangenti una parabola passanti per un punto del piano non nella parabola</h2>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Enrico Sintoni</p>
+<p class="date">Created: 2020-02-11 Tue 19:31</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
