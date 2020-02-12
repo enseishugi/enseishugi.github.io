@@ -2,10 +2,10 @@
 
 `pagina in fase di costruzione`
 
-[Prodotti notevoli](matematica-superiori/prodotti-notevoli.html)
+[Prodotti notevoli](prodotti-notevoli.html)
 
-[Omotetie e dilatazioni](matematica-superiori/omotetie-dilatazioni.html)
+[Omotetie e dilatazioni](omotetie-dilatazioni.html)
 
-[Parabole](matematica-superiori/parabole.html)
+[Parabole](parabole.html)
 
-[Altri collegamenti](matematica-superiori/links.md) Non c'è quello che stavi cercando? Da' un'occhiata qua.
+[Altri collegamenti](links.md) Non c'è quello che stavi cercando? Da' un'occhiata qua.
