@@ -1,5 +1,3 @@
-#Indice di matematica-liceo
-
 `pagina in fase di costruzione`
 
 [Prodotti notevoli](prodotti-notevoli.html)
