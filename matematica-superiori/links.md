@@ -2,7 +2,7 @@
 
 Non hai trovato qui quello che cercavi? Ci sono moltissimi siti (o canali YouTube) che potrebbero avere la risposta alla tua domanda.
 
-1. [https://www.youmath.it/]
+1. (https://www.youmath.it/)
    Sito dedicato alla matematica e alla fisica delle scuole superiori e dei primi corsi di analisi matematica 1 e 2. Ci sono sia lezioni, che esercizi svolti e da svolgere.
 
 1. [https://www.matematicamente.it/]
